@@ -11,6 +11,7 @@ body {
 
 .container {
   max-width: 1170px;
+  width: 1170px;
   margin: 0 auto; }
 
 a {
@@ -43,6 +44,8 @@ a {
     font-style: normal;
     font-size: 16px;
     color: #fff; }
+    .navbar a:hover {
+      color: #a9da20; }
   .navbar a:nth-child(1):before {
     content: "";
     background-image: url(../img/green-dot.png);
@@ -56,12 +59,17 @@ a {
 .start-page {
   background: url("../img/welcome-bg.png");
   background-size: cover;
+  background-position: center center;
   height: 1010px;
   width: 100%;
-  padding-top: 250px;
-  display: block;
-  background-position: center center;
   z-index: -10; }
+
+.start-page .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 145px; }
 
 .start-page-text {
   color: #fff;
@@ -91,7 +99,7 @@ a {
     transform-origin: left; }
   .start-page-text p {
     position: absolute;
-    top: 26%;
+    top: 19%;
     font-weight: bold;
     font-style: normal;
     font-size: 200px;
@@ -135,10 +143,36 @@ a {
   .reg-button:focus {
     outline: none; }
 
-.cls-1 {
-  fill: #8d8d8d;
-  fill-rule: evenodd;
-  opacity: 0.5;
-  filter: url(#filter); }
+.inkblot-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.inkblot {
+  margin-top: 25px;
+  position: relative; }
+  .inkblot p {
+    color: #fff;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 24px;
+    position: absolute;
+    text-align: center;
+    line-height: 45px; }
+    .inkblot p span {
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      font-style: normal;
+      font-size: 80px; }
+  .inkblot:nth-child(1) p {
+    top: 30%;
+    left: 39%; }
+  .inkblot:nth-child(2) p {
+    top: 28%;
+    left: 19%; }
+  .inkblot:nth-child(3) p {
+    top: 33%;
+    left: 27%; }
 
 /*# sourceMappingURL=style.css.map */

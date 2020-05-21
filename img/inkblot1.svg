@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="226" height="191.094" viewBox="0 0 226 191.094">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>                                                                 
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #8d8d8d;
+        fill-rule: evenodd;
+        opacity: 0.5;
+        filter: url(#filter1);
+      }
+    </style>
+    <filter id="filter1" x="1331" y="227.375" width="226" height="191.094" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#00c0c0"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="" class="cls-1" d="M1423.63,229.493a114.763,114.763,0,0,1,19.89-2.1c0.85-.006,1.71,0,2.57.023s1.73,0.058,2.59.11c1.73,0.1,3.48.268,5.23,0.5a66.319,66.319,0,0,1,10.65,2.332c14.3,4.206,29.35,14.956,43.42,30.322,28.62,32.9,48.54,64.025,49.03,86.479-0.01,1.693-.05,3.324-0.13,4.9s-0.18,3.1-.32,4.58c-0.28,2.955-.68,5.725-1.19,8.342A65.829,65.829,0,0,1,1551.05,379a53.185,53.185,0,0,1-15.31,20.013c-13.64,10.344-31.78,16.961-69.21,19.4-1.16.034-2.33,0.053-3.5,0.057s-2.33-.006-3.49-0.03q-3.495-.075-6.96-0.319t-6.9-.654q-3.45-.408-6.85-0.977a155.077,155.077,0,0,1-26.43-6.885,161.282,161.282,0,0,1-44.81-24.389c-25.5-19.658-36.61-43.883-36.6-74.189,1.28-32.886,19.21-57.608,34.74-65.961,16.9-9.608,32.15-10.164,57.9-15.573h0Z" transform="translate(-1331 -227.375)"/>
+</svg>

@@ -1,0 +1,49 @@
+.header {
+	width: 100%;
+	background-color: #0089a9;
+	height: 60px;
+	position: fixed;
+	z-index: 100;
+}
+
+.header-inner {
+	display: flex;
+	height: 60px;
+	align-items: center;
+
+}
+
+.logo {
+	float: left;
+	padding-left: 3px;
+}
+
+.navbar {
+	width: 780px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+
+	a {		
+	font-family: 'Gotham Pro';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	color: #fff;
+	&:hover {
+		color: #a9da20;
+		transition: color 0.2s ease-out; 
+	}
+	}
+
+	a:nth-child(1):before {
+		content: "";
+	    background-image: url(../img/green-dot.png);
+	    background-size: cover;
+	    width: 13px;
+	    height: 12px;
+	    position: relative;
+	    display: inline-block;
+	    left: -5px;
+	}
+}

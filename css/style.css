@@ -45,7 +45,8 @@ a {
     font-size: 16px;
     color: #fff; }
     .navbar a:hover {
-      color: #a9da20; }
+      color: #a9da20;
+      transition: color 0.2s ease-out; }
   .navbar a:nth-child(1):before {
     content: "";
     background-image: url(../img/green-dot.png);

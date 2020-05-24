@@ -1,0 +1,40 @@
+.description /* .container */ {
+	height: 700px;
+	display: grid;
+	grid-template-columns: 50% 45%;
+	padding-top: 100px;
+	justify-content: space-between;
+	width: 100%;
+    // max-width: 2000px;
+    margin: 0 auto;
+}
+
+.description-text {
+	width: 100%;
+    padding-top: 6%;
+	padding-left: calc(100% - 1170px / 2);
+	
+	h5 {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 24px;
+		font-family: 'Gotham Pro', sans-serif;
+	}
+	p {
+		margin-top: 60px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		font-family: 'Gotham Pro', sans-serif;	
+	}
+}
+
+.description-image {
+	background: url("../img/conf-example.png");
+	background-size: 100%, 100%;
+	background-repeat: no-repeat;
+	// max-width: 1000px;
+	width: 100%;
+	height: 100%;
+	// position: absolute;
+}

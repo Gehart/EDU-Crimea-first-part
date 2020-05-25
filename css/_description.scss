@@ -1,5 +1,5 @@
 .description {
-	height: 700px;
+	height: 600px;
 	display: grid;
 	grid-template-columns: 50% 45%;
 	padding: 100px 0px 0px 10px;
@@ -34,4 +34,10 @@
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 100%;
+}
+
+@media (max-width: 1000px) {
+	.description-image {
+		background-size: 125%, 100%;
+	}
 }

@@ -1,11 +1,8 @@
-$(function() {
-  // Owl Carousel
-  var owl = $(".owl-carousel");
-  owl.owlCarousel({
-    items: 4,
+$('.owl-carousel').owlCarousel({
     margin: 30,
     loop: true,
-    nav: true,    
     autoWidth:true,
-  });
-});
+    nav: true,    
+	items: 4,
+    dots: true,
+})

@@ -1,6 +1,5 @@
 .speakers {
-	height: 200px;
-	margin-top: 180px;
+	margin: 160px auto;
 	color: black;
 }
 
@@ -20,8 +19,59 @@
 }
 
 .item {
-	img{
-		height: 100%;
-		
+	position: relative;
+	background: #fff;
+	border-radius: 5px;
+	&:hover{
+		// background: linear-gradient(-141deg, #00c0c0, #0089a9);
+		.item-text{
+			display: block !important;
+		}
+	}
+	&:after {
+		content: '';
+		opacity: 0.94;
+		transition: opacity 0.4s ease-in;
+	}
+	&:hover:after {
+		content: '';
+		position: absolute;
+		top: 0; right: 0;
+		bottom: 0; left: 0;
+		background: linear-gradient(-141deg, #00c0c0, #0089a9);
+		border-radius: 5px;
+		opacity: 0.78;
+		// display: none;
+	}
+
+}
+$margin-out-in: 24px;
+.item-text {
+	position: absolute;		
+	bottom: 0;
+	color: #fff;
+	padding: 0 $margin-out-in;
+	width: 100%;
+	display: none !important;
+	z-index: 10;
+	h4 {
+		font-family: 'Gotham Pro', sans-serif;
+		font-weight: bold;
+		font-style: normal;
+		font-size: 36px;
+	}
+	hr {
+		border: none;
+	    background-color: #fff;
+	    color: #fff; 
+	    height: 1px; 
+	    margin: $margin-out-in 0;
+	}
+	p {
+		font-family: 'Gotham Pro', sans-serif;
+		font-weight: normal;
+		font-style: normal;
+		font-size: 18px;
+		margin-bottom: $margin-out-in + 6;
 	}
 }

@@ -28,9 +28,10 @@ a {
   display: flex;
   height: 60px;
   align-items: center; }
+  .header-inner > a {
+    position: absolute; }
 
 .logo {
-  float: left;
   padding-left: 3px; }
 
 .navbar {
@@ -211,9 +212,6 @@ a {
 @media (max-width: 1000px) {
   .description-image {
     background-size: 125%, 100%; } }
-.main-tracks {
-  height: 450px; }
-
 .main-tracks > h3 {
   font-family: 'Gotham Pro';
   font-weight: 900;
@@ -227,8 +225,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  padding-top: 40px;
-  height: 420px; }
+  padding-top: 40px; }
 
 .track {
   width: 50%;
@@ -276,5 +273,23 @@ a {
   .track {
     width: 80%;
     margin-top: 20px; } }
+.speakers {
+  height: 200px;
+  margin-top: 180px;
+  color: black; }
+
+.speakers .container {
+  padding: 0 15px; }
+  .speakers .container h3 {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 60px;
+    color: #0089a9;
+    text-align: center;
+    padding-bottom: 40px; }
+
+.item img {
+  height: 100%; }
 
 /*# sourceMappingURL=style.css.map */

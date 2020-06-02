@@ -35,20 +35,29 @@ a {
   padding-left: 3px; }
 
 .navbar {
-  width: 780px;
   margin: 0 auto;
+  width: 780px; }
+
+.navbar ul {
   display: flex;
-  justify-content: space-between; }
-  .navbar a {
-    font-family: 'Gotham Pro';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 16px;
-    color: #fff; }
-    .navbar a:hover {
-      color: #a9da20;
-      transition: color 0.2s ease-out; }
-  .navbar a:nth-child(1):before {
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  display: flex; }
+  .navbar ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .navbar ul li a {
+      font-family: 'Gotham Pro';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 16px;
+      color: #fff; }
+      .navbar ul li a:hover {
+        color: #a9da20;
+        transition: color 0.2s ease-out; }
+  .navbar ul li:nth-child(1) a:before {
     content: "";
     background-image: url(../img/green-dot.png);
     background-size: cover;

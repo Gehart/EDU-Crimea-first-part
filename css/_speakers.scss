@@ -75,3 +75,9 @@ $margin-out-in: 24px;
 		margin-bottom: $margin-out-in + 6;
 	}
 }
+
+.owl-dot {
+	&:focus {
+		outline: none;
+	}
+}

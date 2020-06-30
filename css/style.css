@@ -344,4 +344,7 @@ a {
     font-size: 18px;
     margin-bottom: 30px; }
 
+.owl-dot:focus {
+  outline: none; }
+
 /*# sourceMappingURL=style.css.map */

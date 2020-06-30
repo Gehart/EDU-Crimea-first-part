@@ -32,7 +32,9 @@ a {
     position: absolute; }
 
 .logo {
-  padding-left: 3px; }
+  width: 46px;
+  height: 46px;
+  margin-left: 3px; }
 
 .navbar {
   margin: 0 auto;

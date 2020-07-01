@@ -246,14 +246,17 @@ a {
 
 .track-icon {
   position: relative;
-  padding-right: 10px; }
+  margin-right: 10px;
+  display: table; }
+  .track-icon img {
+    display: block; }
   .track-icon img:nth-child(2) {
     position: absolute;
-    top: 13%;
-    left: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100px;
     height: auto;
-    fill: #fff;
     filter: invert(1); }
 
 .track-text {
@@ -282,8 +285,11 @@ a {
     flex-direction: column; }
 
   .track {
-    width: 80%;
-    margin-top: 20px; } }
+    width: 95%;
+    margin-top: 20px; }
+
+  .track-icon {
+    margin-right: 20px; } }
 .speakers {
   margin: 160px auto;
   color: black; }

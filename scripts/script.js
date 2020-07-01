@@ -1,6 +1,5 @@
 var owl = $('.owl-carousel').owlCarousel({
-    margin: 30,
-    // stagePadding: 14,	
+    margin: 30,	
     loop: true,
     responsiveClass:true,
 	navText : ["",""],
@@ -28,3 +27,4 @@ $(".next-arrow").click(function(){
 $(".prev-arrow").click(function(){
 	owl.trigger("prev.owl.carousel");
 });
+

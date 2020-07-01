@@ -5,14 +5,16 @@ var owl = $('.owl-carousel').owlCarousel({
 	navText : ["",""],
     dots: true,
     dotsEach: true,
+    lazyLoad: true,
+    responsiveRefreshRate: 50,
     responsive:{
         0:{
-            items:1
+            dots: false,
         },
-        600:{
-            items:2
+        850:{
+            items:2,
         },
-        900:{
+        1000:{
             items:3
         },
         1150:{

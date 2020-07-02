@@ -56,19 +56,23 @@ a {
       font-weight: normal;
       font-style: normal;
       font-size: 16px;
-      color: #fff; }
+      color: #fff;
+      position: relative; }
       .navbar ul li a:hover {
         color: #a9da20;
         transition: color 0.2s ease-out; }
-  .navbar ul li:nth-child(1) a:before {
+  .navbar ul li:nth-child(3) a:before {
     content: "";
     background-image: url(../img/green-dot.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 13px;
-    height: 12px;
-    position: relative;
+    height: 10px;
+    position: absolute;
     display: inline-block;
-    left: -5px; }
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%); }
   .navbar ul li:last-child {
     margin-right: 0; }
 

@@ -34,16 +34,19 @@
 	margin: 0;
 	padding: 0;
 	display: flex;
+
 	li {
 		margin-right: 30px;
 		padding: 0;
 		list-style: none;
 		a {		
-		font-family: 'Gotham Pro';
-		font-weight: normal;
-		font-style: normal;
-		font-size: 16px;
-		color: #fff;
+			font-family: 'Gotham Pro';
+			font-weight: normal;
+			font-style: normal;
+			font-size: 16px;
+			color: #fff;
+			position: relative;
+
 			&:hover {
 				color: #a9da20;
 				transition: color 0.2s ease-out; 
@@ -51,15 +54,18 @@
 		}
 	}
 
-	li:nth-child(1) a:before {
-		content: "";
+	li:nth-child(3) a:before {
+	    content: "";
 	    background-image: url(../img/green-dot.png);
-	    background-size: cover;
+	    background-size: contain;
+	    background-repeat: no-repeat;
 	    width: 13px;
-	    height: 12px;
-	    position: relative;
+	    height: 10px;
+	    position: absolute;
 	    display: inline-block;
-	    left: -5px;
+	    left: -15px;
+	    top: 50%;
+	    transform: translateY(-50%);
 	}
 
 	li:last-child {

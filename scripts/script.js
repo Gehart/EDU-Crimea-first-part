@@ -86,3 +86,4 @@ for (let anchor of anchors) {
 }
 
 
+console.log(document.querySelector('.navbar ul li:nth-child(1) a:before'));

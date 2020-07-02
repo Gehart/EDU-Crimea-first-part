@@ -5,10 +5,6 @@
 	position: fixed;
 	z-index: 100;
 	transition: all 0.4s ease-out;
-
-	// &:hover {
-	// 	// background-color: #0089a9;
-	// }
 	
 	.container {
 		height: 100%;
@@ -33,16 +29,13 @@
 
 .navbar {
 	margin: 0 auto;
-	width: 780px;
 }
 .navbar ul{
-	display: flex;
-	justify-content: space-between;
 	margin: 0;
 	padding: 0;
 	display: flex;
 	li {
-		margin: 0;
+		margin-right: 30px;
 		padding: 0;
 		list-style: none;
 		a {		
@@ -67,7 +60,11 @@
 	    position: relative;
 	    display: inline-block;
 	    left: -5px;
-	}	
+	}
+
+	li:last-child {
+		margin-right: 0;
+	}
 }
 
 .header-opacity {

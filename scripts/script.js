@@ -26,7 +26,7 @@ var owl = $('.owl-carousel').owlCarousel({
 });
 
 $(".next-arrow").click(function(){
-		owl.trigger("next.owl.carousel");
+	owl.trigger("next.owl.carousel");
 });
 $(".prev-arrow").click(function(){
 	owl.trigger("prev.owl.carousel");
@@ -47,7 +47,9 @@ function showSize(){
 }
 
 // свойста header при скролле
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", changeHeaderOnScroll);
+
+function changeHeaderOnScroll() {
   let header = document.querySelector(".header");
 
   if (window.pageYOffset > 0) {
@@ -64,7 +66,7 @@ window.addEventListener("scroll", function() {
   else {
     header.classList.remove("header-opacity");
   }
-});
+}
 
 // плавный переход по якорям
 const anchors = document.querySelectorAll('a[href*="#"]');
@@ -79,11 +81,39 @@ for (let anchor of anchors) {
     var offsetPosition = elementPosition - headerOffset + window.pageYOffset;
     // прокручиваем до элемента
     window.scrollTo({
-         top: offsetPosition,
-         behavior: "smooth"
+        top: offsetPosition,
+        behavior: "smooth"
     });
   })
 }
 
+// массив секций
+let sections = document.querySelectorAll('section');
+// отступ до центра экрана
+let offsetToCenter = document.documentElement.clientHeight / 2;
+// последняя добавленная точка
+let lastIndex;
 
-console.log(document.querySelector('.navbar ul li:nth-child(1) a:before'));
+changeDotPosition();
+window.addEventListener("scroll", changeDotPosition);
+
+function changeDotPosition() {
+  let YOffset = window.pageYOffset;
+  let k = 0;
+  let rect = [];
+  for(let section of sections) {
+    rect[k] = section.getBoundingClientRect();
+    k++;
+  }
+  
+  for(let i = 0; i < k; i++) {
+    if(rect[i].top < offsetToCenter && rect[i].bottom > offsetToCenter) {
+      document.querySelector('.navbar ul li:nth-child(' + (i+1) +') a').classList.add('dot');
+      lastIndex = i;
+    }
+    // проверка, чтобы точка не удалялась, пока не добавилась другая
+    else if (lastIndex != i){
+      document.querySelector('.navbar ul li:nth-child(' + (i+1) +') a').classList.remove('dot');
+    }
+  }
+}

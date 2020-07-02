@@ -53,21 +53,7 @@
 			}
 		}
 	}
-
-	li:nth-child(3) a:before {
-	    content: "";
-	    background-image: url(../img/green-dot.png);
-	    background-size: contain;
-	    background-repeat: no-repeat;
-	    width: 13px;
-	    height: 10px;
-	    position: absolute;
-	    display: inline-block;
-	    left: -15px;
-	    top: 50%;
-	    transform: translateY(-50%);
-	}
-
+	
 	li:last-child {
 		margin-right: 0;
 	}
@@ -76,4 +62,18 @@
 .header-opacity {
     background-color: rgba(0, 137, 169, 0.8);
     // box-shadow: 0px 0px 11px -3px #000;
+}
+
+.dot:before {
+	content: "";
+	background-image: url(../img/green-dot.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 10px;
+    position: absolute;
+    display: inline-block;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
 }

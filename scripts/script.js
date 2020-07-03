@@ -1,8 +1,119 @@
-$('.owl-carousel').owlCarousel({
-    margin: 30,
+// настройки owl-carousel
+var owl = $('.owl-carousel').owlCarousel({
+    margin: 30,	
     loop: true,
-    autoWidth:true,
-    // nav: true,    
-	items: 4,
+    responsiveClass:true,
+	navText : ["",""],
     dots: true,
-})
+    dotsEach: true,
+    lazyLoad: true,
+    responsiveRefreshRate: 50,
+    responsive:{
+        0:{
+            items: 1,
+            dots: false,
+        },
+        850:{
+            items:2,
+        },
+        1000:{
+            items:3
+        },
+        1150:{
+            items:4
+        }
+    }
+});
+
+$(".next-arrow").click(function(){
+	owl.trigger("next.owl.carousel");
+});
+$(".prev-arrow").click(function(){
+	owl.trigger("prev.owl.carousel");
+});
+
+// для тестирования размеров окна
+window.addEventListener('resize', showSize);
+function showSize(){
+  if(window.innerWidth !== undefined && window.innerHeight !== undefined) { 
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+  } else {  
+    var w = document.documentElement.clientWidth;
+    var h = document.documentElement.clientHeight;
+  }
+  var txt = "Page size: width=" + w + ", height=" + h;
+  console.log(txt);
+}
+
+// свойста header при скролле
+window.addEventListener("scroll", changeHeaderOnScroll);
+
+function changeHeaderOnScroll() {
+  let header = document.querySelector(".header");
+
+  if (window.pageYOffset > 0) {
+    header.classList.add("header-opacity");
+
+    // отменяем изменения при наведении
+    header.addEventListener("mouseover", function() {
+        header.classList.remove("header-opacity");
+    });
+    header.addEventListener("mouseout", function() {
+        header.classList.add("header-opacity");
+    });
+  } 
+  else {
+    header.classList.remove("header-opacity");
+  }
+}
+
+// плавный переход по якорям
+const anchors = document.querySelectorAll('a[href*="#"]');
+const headerOffset = 60;
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    // узнаем позицию элемента
+    var elementPosition = document.getElementById(anchor.getAttribute('href').substr(1)).getBoundingClientRect().top;
+    // узнаем значения, нужное для смещения
+    var offsetPosition = elementPosition - headerOffset + window.pageYOffset;
+    // прокручиваем до элемента
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    });
+  })
+}
+
+// массив секций
+let sections = document.querySelectorAll('section');
+// отступ до центра экрана
+let offsetToCenter = document.documentElement.clientHeight / 2;
+// последняя добавленная точка
+let lastIndex;
+
+changeDotPosition();
+window.addEventListener("scroll", changeDotPosition);
+
+function changeDotPosition() {
+  let YOffset = window.pageYOffset;
+  let k = 0;
+  let rect = [];
+  for(let section of sections) {
+    rect[k] = section.getBoundingClientRect();
+    k++;
+  }
+  
+  for(let i = 0; i < k; i++) {
+    if(rect[i].top < offsetToCenter && rect[i].bottom > offsetToCenter) {
+      document.querySelector('.navbar ul li:nth-child(' + (i+1) +') a').classList.add('dot');
+      lastIndex = i;
+    }
+    // проверка, чтобы точка не удалялась, пока не добавилась другая
+    else if (lastIndex != i){
+      document.querySelector('.navbar ul li:nth-child(' + (i+1) +') a').classList.remove('dot');
+    }
+  }
+}

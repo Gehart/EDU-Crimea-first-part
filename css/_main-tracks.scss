@@ -27,17 +27,23 @@
 
 .track-icon {
 	position: relative;
-	padding-right: 10px;
-	img:nth-child(1) {
+	margin-right: 10px;
+	display: table;
 
+	img  {
+		display: block;
 	}
+
+	img:nth-child(1) {
+	}
+	
 	img:nth-child(2) {
 		position: absolute;
- 		top: 13%;
-	    left: 20%;
+ 		top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
 	    width: 100px;
 	    height: auto;
-	    fill: #fff;
 	    filter: invert(1);
 	}
 }
@@ -72,7 +78,10 @@
 	    flex-direction: column;
 	}
 	.track {
-		width: 80%;
+		width:95%;
 		margin-top: 20px;
+	}
+	.track-icon {
+		margin-right: 20px;
 	}
 }

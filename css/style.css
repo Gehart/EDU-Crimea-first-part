@@ -91,7 +91,6 @@ a {
 .start-page .container {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   padding-top: 145px; }
 
@@ -199,6 +198,18 @@ a {
     top: 33%;
     left: 27%; }
 
+@media (max-width: 1000px) {
+  .start-page .container {
+    flex-direction: column; }
+
+  .start-page-text h1 {
+    font-size: 46px; }
+
+  .start-page-text p {
+    font-size: 56px; }
+
+  .start-page-text h1, .start-page-text h2, .start-page-text h3, .start-page-text h4, .start-page-text p {
+    line-height: unset; } }
 .description {
   height: 600px;
   display: grid;

@@ -10,10 +10,10 @@
 .start-page .container{	
 	display: flex;
 	flex-direction: row;
-	align-items: center;
 	justify-content: space-between;
 	padding-top: 145px;
 }
+
 
 .start-page-text {
 	color: #fff;
@@ -138,5 +138,23 @@ $shadow-width: 6px;
 	&:nth-child(3) p{
 		top: 33%;
     	left: 27%;
+	}
+}
+
+@media (max-width: 1000px) {
+	.start-page .container{	
+		flex-direction: column;
+	}
+	.start-page-text h1{
+		font-size: 46px;
+	}
+	.start-page-text p{
+		font-size: 56px;
+	}
+	.start-page-text  {
+		h1, h2, h3, h4, p {
+			line-height: unset;
+
+		}
 	}
 }

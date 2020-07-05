@@ -7,7 +7,8 @@ div, p, h1, h2, h3, h4, h5, h6 {
 body {
   font-family: 'Gotham Pro', sans-serif;
   margin: 0;
-  background-color: #fff; }
+  background-color: #fff;
+  line-height: 1.1; }
 
 .container {
   max-width: 1190px;
@@ -363,16 +364,16 @@ a {
     padding-top: 20px;
     width: 95%; } }
 .description {
-  height: 600px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 100px 0px 0px 10px;
   grid-gap: 30px; }
 
 .description-text {
-  width: 100%;
   padding-top: 6%;
-  padding-left: calc(100% - 1170px / 2); }
+  padding-left: calc(100% - 1150px / 2);
+  grid-column-start: 1;
+  grid-row-start: 1; }
   .description-text h5 {
     font-style: normal;
     font-weight: bold;
@@ -387,20 +388,27 @@ a {
 
 .description img {
   object-fit: cover;
+  object-position: left top;
   width: 100%;
-  justify-self: end; }
+  justify-self: end;
+  grid-column-start: 2; }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .description {
     display: unset; }
 
-  .description-image {
+  .description img {
+    object-fit: cover;
     float: right;
-    width: 200px;
-    height: 100px; }
+    width: 50%; }
 
   .description-text {
-    float: left; } }
+    padding-top: 0;
+    padding-left: 10px; }
+    .description-text h5 {
+      font-size: 1.3rem; }
+    .description-text p {
+      font-size: 1rem; } }
 .main-tracks > h3 {
   font-family: 'Gotham Pro';
   font-weight: 900;

@@ -1,5 +1,5 @@
 .description {
-    height: 600px;
+    // height: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 100px 0px 0px 10px;
@@ -7,9 +7,11 @@
 }
 
 .description-text {
-	width: 100%;
     padding-top: 6%;
-	padding-left: calc(100% - 1170px / 2);
+	padding-left: calc(100% - 1150px / 2);
+
+	grid-column-start: 1;
+    grid-row-start: 1;
 	
 	h5 {
 		font-style: normal;
@@ -27,32 +29,35 @@
 }
 
 .description img {	
-	object-fit: cover;
-	width: 100%;
-	// height: inherit;
-	justify-self: end;
+    object-fit: cover;
+    object-position: left top;
+    width: 100%;
+    justify-self: end;
+
+    grid-column-start: 2;
 }
 
-//  description-image {
-//  	background-size: 125%, 100%;
-// 	}
-@media (max-width: 1000px) {
+
+@media (max-width: 1024px) {
 	.description {
 		display: unset;
 	}
-	.description-image {
-		float: right;
-		width: 200px;
-		height: 100px;
-		// display: block;
+	.description img {
+	    // height: fit-content;
+	    object-fit: cover;
+	    float: right;
+	    width: 50%;
 	}
 	
 	.description-text {
-		// width: 200px;
-		// display: inline-block;
-		float: left;
-	}
-	body {
-		// background-color: green;
+		padding-top: 0;
+	    
+		padding-left: 10px;
+		h5 {
+			font-size: 1.3rem;
+		}
+		p {
+			font-size: 1rem;
+		}
 	}
 }

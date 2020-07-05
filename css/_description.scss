@@ -1,5 +1,4 @@
 .description {
-    // height: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 100px 0px 0px 10px;
@@ -43,7 +42,6 @@
 		display: unset;
 	}
 	.description img {
-	    // height: fit-content;
 	    object-fit: cover;
 	    float: right;
 	    width: 50%;
@@ -55,9 +53,18 @@
 		padding-left: 10px;
 		h5 {
 			font-size: 1.3rem;
+			font-weight: 500;
 		}
 		p {
 			font-size: 1rem;
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.description-text {
+		h5 {
+			font-size: 1.2rem;
 		}
 	}
 }

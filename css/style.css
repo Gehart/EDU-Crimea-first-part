@@ -80,6 +80,9 @@ a {
   top: 50%;
   transform: translateY(-50%); }
 
+@media (max-width: 768px) {
+  .navbar {
+    display: none; } }
 .start-page {
   background: url("../img/welcome-bg.png");
   background-size: cover;
@@ -137,10 +140,11 @@ a {
     font-size: 72px;
     line-height: 95px; }
   .start-page-text h4 {
-    padding-top: 30px;
+    padding-top: 40px;
     font-weight: normal;
     font-style: normal;
-    font-size: 18px; }
+    font-size: 18px;
+    width: 60%; }
 
 .reg-button {
   color: #fff;
@@ -257,7 +261,8 @@ a {
     font-size: 40px; }
   .start-page-text h4 {
     font-size: 1rem;
-    padding-top: 20px; }
+    padding-top: 20px;
+    width: 80%; }
 
   .reg-button {
     font-size: 20px;
@@ -276,9 +281,19 @@ a {
       line-height: 35px; }
       .inkblot p span {
         font-size: 50px; } }
+@media (max-width: 610px) {
+  .start-page .container {
+    flex-direction: column; }
+
+  .inkblot-column {
+    margin-top: 45px;
+    height: 110px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline; } }
 @media (max-width: 450px) {
   .start-page {
-    height: 100vh; }
+    height: 755px; }
 
   .start-page .container {
     padding-top: 130px;
@@ -310,6 +325,7 @@ a {
   .inkblot-column {
     margin-top: 45px;
     height: 110px;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: baseline; }
 
@@ -320,6 +336,32 @@ a {
       line-height: 20px; }
       .inkblot p span {
         font-size: 36px; } }
+@media (max-width: 370px) {
+  .start-page {
+    height: 755px; }
+
+  .start-page .container {
+    padding-top: 130px;
+    flex-direction: column; }
+
+  .start-page-text h3:nth-child(1) {
+    font-size: 16px; }
+  .start-page-text h3:nth-child(2) {
+    font-size: 12px; }
+  .start-page-text h1 {
+    font-size: 45px;
+    line-height: 65px; }
+  .start-page-text p {
+    font-size: 90px; }
+  .start-page-text h2 {
+    font-size: 48px;
+    line-height: 65px; }
+  .start-page-text h3 {
+    font-size: 40px; }
+  .start-page-text h4 {
+    font-size: 1rem;
+    padding-top: 20px;
+    width: 95%; } }
 .description {
   height: 600px;
   display: grid;

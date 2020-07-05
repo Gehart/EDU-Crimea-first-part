@@ -1,11 +1,9 @@
 .description {
-	height: 600px;
-	display: grid;
-	grid-template-columns: 50% 45%;
-	padding: 100px 0px 0px 10px;
-	justify-content: space-between;
-	width: 100%;
-    margin: 0 auto;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 100px 0px 0px 10px;
+    grid-gap: 30px;
 }
 
 .description-text {
@@ -28,33 +26,33 @@
 	}
 }
 
-.description-image {
-	background: url("../img/conf-example.png");
-	background-size: 100%, 100%;
-	background-repeat: no-repeat;
+.description img {	
+	object-fit: cover;
 	width: 100%;
-	height: 100%;
+	// height: inherit;
+	justify-self: end;
 }
-@media (max-width: 950px) {
-	body {
-		// background-color: blue;
-	}
-	.description-text {
-		h5 {
-			font-size: 30px;
-		}
-		p {
-			font-size: 25px;
-		}
-	}
-}
+
+//  description-image {
+//  	background-size: 125%, 100%;
+// 	}
 @media (max-width: 1000px) {
+	.description {
+		display: unset;
+	}
 	.description-image {
-		background-size: 125%, 100%;
+		float: right;
+		width: 200px;
+		height: 100px;
+		// display: block;
+	}
+	
+	.description-text {
+		// width: 200px;
+		// display: inline-block;
+		float: left;
 	}
 	body {
 		// background-color: green;
 	}
 }
-
-

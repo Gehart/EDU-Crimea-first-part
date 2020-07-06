@@ -23,7 +23,6 @@
 	position: relative;
 	background: #fff;
 	border-radius: 5px;
-	height: 390px;
 
 	&:hover{
 		.item-text{
@@ -53,27 +52,10 @@
     background: #0097a8;
 }
 
-@media (max-width: 1150px) {
-	.item {
-		height: 430px;
-	}
-	.owl-theme .owl-dots .owl-dot span {
-		width: 20px;
-		height: 20px;
-	}
-
-}
-
-@media (max-width: 1000px) {
-	.item {
-		height: 600px;
-	}
-}
-
 .item img {
     display: block;
     width: auto; 
-    height: 100% !important;
+    // height: 100% !important;
 	border-radius: 5px;
 
     object-fit: cover;
@@ -98,8 +80,9 @@ $margin-out-in: 24px;
 		border: none;
 	    background-color: #fff;
 	    color: #fff; 
-	    height: 1px; 
+	    height: 1px;
 	    margin: $margin-out-in 0;
+	    transition: all 1s ease-out;
 	}
 	p {
 		font-family: 'Gotham Pro', sans-serif;
@@ -109,6 +92,7 @@ $margin-out-in: 24px;
 		margin-bottom: $margin-out-in + 6;
 	}
 }
+
 
 .owl-dot, .owl-prev, .owl-next {
 	&:focus {
@@ -122,6 +106,13 @@ $margin-out-in: 24px;
 	top: 50%;
 	bottom: 50%;
 }
+.prev-arrow {	
+    left: -3%;
+}
+
+.next-arrow {
+    right: -3%;	
+}
 
 @media (max-width: 1290px) {
 	.nav-arrow { 
@@ -129,10 +120,26 @@ $margin-out-in: 24px;
 	}
 }
 
-.prev-arrow {	
-    left: -3%;
+@media (max-width: 1150px) {
+	.item {
+	}
+	.owl-theme .owl-dots .owl-dot span {
+		width: 12px;
+		height: 12px;
+	}
+
 }
 
-.next-arrow {
-    right: -3%;	
+@media (max-width: 768px) {
+	.speakers .container {
+		h3 {
+			font-size: 40px;
+		}
+	}
+	.item {
+	
+		&:after {
+			transition: none;
+		}
+	}
 }

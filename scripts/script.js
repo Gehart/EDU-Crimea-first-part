@@ -3,23 +3,26 @@ var owl = $('.owl-carousel').owlCarousel({
     margin: 30,	
     loop: true,
     responsiveClass:true,
+    nav: true,
 	navText : ["",""],
     dots: true,
     dotsEach: true,
-    lazyLoad: true,
-    responsiveRefreshRate: 50,
+    // stagePadding: 50,
+    // autoWidth: true,
     responsive:{
         0:{
-            items: 1,
-            dots: false,
+            items:1,
         },
-        850:{
-            items:2,
+        450:{
+            items: 2,
         },
-        1000:{
-            items:3
+        768:{
+            items:3,
         },
-        1150:{
+        // 1000:{
+        //     items:3
+        // },
+        1024:{
             items:4
         }
     }
@@ -31,20 +34,6 @@ $(".next-arrow").click(function(){
 $(".prev-arrow").click(function(){
 	owl.trigger("prev.owl.carousel");
 });
-
-// для тестирования размеров окна
-window.addEventListener('resize', showSize);
-function showSize(){
-  if(window.innerWidth !== undefined && window.innerHeight !== undefined) { 
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-  } else {  
-    var w = document.documentElement.clientWidth;
-    var h = document.documentElement.clientHeight;
-  }
-  var txt = "Page size: width=" + w + ", height=" + h;
-  console.log(txt);
-}
 
 // свойста header при скролле
 window.addEventListener("scroll", changeHeaderOnScroll);
@@ -117,3 +106,18 @@ function changeDotPosition() {
     }
   }
 }
+
+// $('.item').hover(function() {
+//   console.log('change hr');
+//   let hrAr = document.querySelectorAll('.item .item-text hr');
+//   // console.log(document.querySelectorAll('.item .item-text hr'));
+//   for(let hr of hrAr) {
+//     hr.style.width = '90%'; 
+//   }
+//   // обработчик наведения мыши
+
+// }, function() {
+
+//   // обработчик отведения мыши
+
+// });

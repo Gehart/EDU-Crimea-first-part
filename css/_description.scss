@@ -1,7 +1,7 @@
 .description {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 100px 0px 0px 10px;
+    padding: 60px 0px 0px 10px;
     grid-gap: 30px;
 }
 
@@ -40,7 +40,7 @@
 
 @media (max-width: 1024px) {
 	.description {
-		display: unset;
+		display: block;
 	}
 	.description-img {
 		width: 50%;

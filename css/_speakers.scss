@@ -1,5 +1,5 @@
 .speakers {
-	margin: 160px auto;
+	margin: 100px auto 0 auto;
 	color: black;
 }
 
@@ -130,6 +130,9 @@ $margin-out-in: 24px;
 }
 
 @media (max-width: 768px) {
+	.speakers {
+		margin: 70px auto 0 auto;
+	}
 	.speakers .container {
 		h3 {
 			font-size: 40px;

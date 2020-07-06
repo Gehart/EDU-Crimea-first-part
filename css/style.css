@@ -542,7 +542,7 @@ a {
     .track-text h5 {
       font-size: 1.2rem; } }
 .speakers {
-  margin: 160px auto;
+  margin: 100px auto 0 auto;
   color: black; }
 
 .speakers .container {
@@ -640,6 +640,9 @@ a {
     width: 12px;
     height: 12px; } }
 @media (max-width: 768px) {
+  .speakers {
+    margin: 70px auto 0 auto; }
+
   .speakers .container h3 {
     font-size: 40px; }
 

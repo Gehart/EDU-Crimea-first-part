@@ -1,7 +1,7 @@
 .start-page {
 	background: url("../img/welcome-bg.png");
 	background-size: cover;
-	background-position: center bottom;
+    background-position: 25% bottom;
 	height: 1008px;
 	width: 100%;
 	z-index: -10;
@@ -147,6 +147,51 @@ $shadow-width: 6px;
 	}
 }
 
+@media (max-width: 1440px) {
+	.start-page {
+		height: 920px;
+	}
+
+	.start-page-text {
+		h3:nth-child(1){
+			font-size: 20px;
+		}
+		h3:nth-child(2){
+			font-size: 18px;
+		}
+		h1{
+			font-size: 90px;
+		}
+		p{
+			font-size: 125px;
+		}
+		h2 {
+			font-size: 60px;
+		}
+		h3 {
+			font-size: 46px;
+		}
+	}
+	.reg-button {
+	    padding: 15px 56px;
+	}
+	.inkblot-column {
+		height: 620px;
+		margin-top: -40px;
+	}
+	
+	.inkblot {
+		height: 175px;
+		p {
+			font-size: 25px;
+			line-height: 35px;
+			span {
+				font-size: 70px;
+			}
+		}
+	}
+}
+
 @media (max-width: 1024px) {
 	.start-page {
 		height: 885px;
@@ -266,9 +311,21 @@ $shadow-width: 6px;
 	.inkblot-column {
 	    margin-top: 45px;
         height: 110px;
-		flex-wrap: wrap;
-	    flex-direction: row;
+        flex-direction: row;
 	    align-items: baseline;
+	}
+	.start-page {
+	    height: 777px;
+	}
+	.inkblot {
+		height: 100px;
+		p {
+			font-size: 16px;
+			line-height: 25px;
+			span {
+			    font-size: 40px;
+			}
+		}
 	}
 }
 

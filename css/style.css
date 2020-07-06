@@ -386,7 +386,7 @@ a {
     font-size: 18px;
     font-family: 'Gotham Pro', sans-serif; }
 
-.description img {
+.description-img img {
   object-fit: cover;
   object-position: left top;
   width: 100%;
@@ -397,10 +397,16 @@ a {
   .description {
     display: unset; }
 
+  .description-img {
+    width: 50%;
+    /* display: inline-block; */
+    height: 300px;
+    float: right; }
+
   .description img {
     object-fit: cover;
-    float: right;
-    width: 50%; }
+    height: inherit;
+    width: 100%; }
 
   .description-text {
     padding-top: 0;
@@ -410,9 +416,19 @@ a {
       font-weight: 500; }
     .description-text p {
       font-size: 1rem; } }
+@media (max-width: 768px) {
+  .description-img {
+    height: 250px; } }
 @media (max-width: 450px) {
+  .description-img {
+    height: 200px; }
+
   .description-text h5 {
     font-size: 1.2rem; } }
+@media (max-width: 370px) {
+  .description-img {
+    height: 160px;
+    width: 40%; } }
 .main-tracks {
   margin-top: 70px; }
 

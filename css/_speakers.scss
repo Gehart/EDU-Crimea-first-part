@@ -54,8 +54,7 @@
 
 .item img {
     display: block;
-    width: auto; 
-    // height: 100% !important;
+    width: auto;
 	border-radius: 5px;
 
     object-fit: cover;
@@ -137,7 +136,7 @@ $margin-out-in: 24px;
 		}
 	}
 	.item {
-	
+		
 		&:after {
 			transition: none;
 		}

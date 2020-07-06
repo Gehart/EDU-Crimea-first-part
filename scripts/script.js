@@ -12,6 +12,7 @@ var owl = $('.owl-carousel').owlCarousel({
     responsive:{
         0:{
             items:1,
+            autoWidth: true,
         },
         450:{
             items: 2,
@@ -19,9 +20,6 @@ var owl = $('.owl-carousel').owlCarousel({
         768:{
             items:3,
         },
-        // 1000:{
-        //     items:3
-        // },
         1024:{
             items:4
         }

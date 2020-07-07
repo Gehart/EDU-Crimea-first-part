@@ -52,12 +52,11 @@
     background: #0097a8;
 }
 
-.item img {
-    display: block;
-    width: auto;
-	border-radius: 5px;
-
-    object-fit: cover;
+.item-img {
+	background-size: cover;
+    background-position: center 25%;
+    border-radius: 5px;
+    height: 375px;
 }
 
 $margin-out-in: 24px;
@@ -126,7 +125,6 @@ $margin-out-in: 24px;
 		width: 12px;
 		height: 12px;
 	}
-
 }
 
 @media (max-width: 768px) {
@@ -144,4 +142,14 @@ $margin-out-in: 24px;
 			transition: none;
 		}
 	}
+	.item-img {
+		height: 415px;
+	}	
+}
+
+@media (max-width: 450px) {
+	.item-img {
+		height: 450px;
+	    margin: 0 auto;
+	}	
 }

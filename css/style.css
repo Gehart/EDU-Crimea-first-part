@@ -622,11 +622,11 @@ a {
   margin: 5px 7px;
   background: #0097a8; }
 
-.item img {
-  display: block;
-  width: auto;
+.item-img {
+  background-size: cover;
+  background-position: center 25%;
   border-radius: 5px;
-  object-fit: cover; }
+  height: 375px; }
 
 .item-text {
   position: absolute;
@@ -685,6 +685,13 @@ a {
     font-size: 40px; }
 
   .item:after {
-    transition: none; } }
+    transition: none; }
+
+  .item-img {
+    height: 415px; } }
+@media (max-width: 450px) {
+  .item-img {
+    height: 450px;
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=style.css.map */

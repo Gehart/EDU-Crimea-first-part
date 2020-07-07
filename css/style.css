@@ -81,9 +81,46 @@ a {
   top: 50%;
   transform: translateY(-50%); }
 
-@media (max-width: 1024px) {
+.burger {
+  display: none;
+  margin-right: 5%;
+  cursor: pointer; }
+  .burger div {
+    background-color: #fff;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    border-radius: 5px; }
+
+@media (max-width: 960px) {
   .navbar {
-    display: none; } }
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 60%;
+    background-color: rgba(0, 137, 169, 0.8);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-out; }
+    .navbar ul {
+      height: calc(100vh - 60px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+    .navbar ul li {
+      margin-right: 0; }
+      .navbar ul li a {
+        font-size: 1rem; }
+
+  .header-inner {
+    justify-content: space-between; }
+    .header-inner > a {
+      position: unset; }
+
+  .burger {
+    display: block; } }
+.navbar-active {
+  transform: translateX(0); }
+
 .start-page {
   background: url("../img/welcome-bg.png");
   background-size: cover;

@@ -7,8 +7,6 @@ var owl = $('.owl-carousel').owlCarousel({
 	navText : ["",""],
     dots: true,
     dotsEach: true,
-    // stagePadding: 50,
-    // autoWidth: true,
     responsive:{
         0:{
             items:1,
@@ -43,7 +41,9 @@ function changeHeaderOnScroll() {
 
     // отменяем изменения при наведении
     header.addEventListener("mouseover", function() {
+      if(!$('.navbar')[0].classList.contains('navbar-active')){
         header.classList.remove("header-opacity");
+      }
     });
     header.addEventListener("mouseout", function() {
         header.classList.add("header-opacity");
@@ -104,17 +104,15 @@ function changeDotPosition() {
   }
 }
 
-// $('.item').hover(function() {
-//   console.log('change hr');
-//   let hrAr = document.querySelectorAll('.item .item-text hr');
-//   // console.log(document.querySelectorAll('.item .item-text hr'));
-//   for(let hr of hrAr) {
-//     hr.style.width = '90%'; 
-//   }
-//   // обработчик наведения мыши
 
-// }, function() {
+const navBurger = () => {
+  const burger = document.querySelector('.burger');
+  const navbar = document.querySelector('.navbar');
+  const header = document.querySelector('.header');
 
-//   // обработчик отведения мыши
-
-// });
+  burger.addEventListener('click', () => {
+    navbar.classList.toggle('navbar-active');
+    header.classList.add('header-opacity');
+  });
+}
+navBurger();

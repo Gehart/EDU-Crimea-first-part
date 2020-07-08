@@ -83,6 +83,7 @@ $header-heigth: 60px;
 	margin-right: 5%;
 	cursor: pointer;
 	div {
+		transition: all 0.5s ease-out;
 		background-color: #fff;
 		width: 25px;
 		height: 3px;
@@ -130,4 +131,24 @@ $header-heigth: 60px;
 
 .navbar-active {
 	transform: translateX(0);
+}
+
+.burger-active {
+	div {
+		margin: 0;
+		width: 15px;
+		height: 2px;
+		background-color: #f5f5f5;
+			}
+	.line1 {
+		transform: rotate(-45deg) translateY(3px);
+	    transform-origin: center top;
+	}
+	.line2 {
+		opacity: 0;
+	}
+	.line3 {
+	    transform: rotate(45deg) translateY(-3px);
+	    transform-origin: center bottom;
+	}
 }

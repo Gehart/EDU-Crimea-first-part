@@ -36,7 +36,7 @@ window.addEventListener("scroll", changeHeaderOnScroll);
 function changeHeaderOnScroll() {
   let header = document.querySelector(".header");
 
-  if (window.pageYOffset > 0) {
+  if (window.pageYOffset > 0 ) {
     header.classList.add("header-opacity");
 
     // отменяем изменения при наведении
@@ -49,7 +49,7 @@ function changeHeaderOnScroll() {
         header.classList.add("header-opacity");
     });
   } 
-  else {
+  else if(!$('.navbar')[0].classList.contains('navbar-active')) {
     header.classList.remove("header-opacity");
   }
 }
@@ -112,6 +112,7 @@ const navBurger = () => {
 
   burger.addEventListener('click', () => {
     navbar.classList.toggle('navbar-active');
+    burger.classList.toggle('burger-active');
     header.classList.add('header-opacity');
   });
 }

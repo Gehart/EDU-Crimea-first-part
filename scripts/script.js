@@ -3,23 +3,21 @@ var owl = $('.owl-carousel').owlCarousel({
     margin: 30,	
     loop: true,
     responsiveClass:true,
+    nav: true,
 	navText : ["",""],
     dots: true,
     dotsEach: true,
-    lazyLoad: true,
-    responsiveRefreshRate: 50,
     responsive:{
         0:{
-            items: 1,
-            dots: false,
+            items:1,
         },
-        850:{
-            items:2,
+        450:{
+            items: 2,
         },
-        1000:{
-            items:3
+        768:{
+            items:3,
         },
-        1150:{
+        1024:{
             items:4
         }
     }
@@ -32,38 +30,26 @@ $(".prev-arrow").click(function(){
 	owl.trigger("prev.owl.carousel");
 });
 
-// для тестирования размеров окна
-window.addEventListener('resize', showSize);
-function showSize(){
-  if(window.innerWidth !== undefined && window.innerHeight !== undefined) { 
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-  } else {  
-    var w = document.documentElement.clientWidth;
-    var h = document.documentElement.clientHeight;
-  }
-  var txt = "Page size: width=" + w + ", height=" + h;
-  console.log(txt);
-}
-
 // свойста header при скролле
 window.addEventListener("scroll", changeHeaderOnScroll);
 
 function changeHeaderOnScroll() {
   let header = document.querySelector(".header");
 
-  if (window.pageYOffset > 0) {
+  if (window.pageYOffset > 0 ) {
     header.classList.add("header-opacity");
 
     // отменяем изменения при наведении
     header.addEventListener("mouseover", function() {
+      if(!$('.navbar')[0].classList.contains('navbar-active')){
         header.classList.remove("header-opacity");
+      }
     });
     header.addEventListener("mouseout", function() {
         header.classList.add("header-opacity");
     });
   } 
-  else {
+  else if(!$('.navbar')[0].classList.contains('navbar-active')) {
     header.classList.remove("header-opacity");
   }
 }
@@ -117,3 +103,17 @@ function changeDotPosition() {
     }
   }
 }
+
+
+const navBurger = () => {
+  const burger = document.querySelector('.burger');
+  const navbar = document.querySelector('.navbar');
+  const header = document.querySelector('.header');
+
+  burger.addEventListener('click', () => {
+    navbar.classList.toggle('navbar-active');
+    burger.classList.toggle('burger-active');
+    header.classList.add('header-opacity');
+  });
+}
+navBurger();

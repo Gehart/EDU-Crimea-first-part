@@ -1,0 +1,225 @@
+* {
+	box-sizing: border-box;
+}
+
+div, p, h1, h2, h3, h4, h5, h6{
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Gotham Pro', sans-serif;
+	font-size: 1rem;
+	font-style: normal;
+	min-height: 100vh;
+	display: flex;
+}
+
+$blue-color:#0089a9;
+.wrapper {
+}
+
+.bg {
+	background-image: url("../img/registration-bg.png");
+	background-size: cover;
+	background-position: right center;
+	width: 40%;
+}
+
+.registration {
+}
+
+.reg-content {
+	// flex-basis: 555px;
+	width: 555px;
+
+	padding: 0 15px;
+	margin-left: 10%;
+}
+
+h2, h4 {
+	color: #0089a9;
+	text-align: center;
+}
+
+h2 {
+	font-size: 3.1rem;	
+	font-weight: 900;
+	margin-top: 40px;
+}
+
+h4 {
+	font-size: 1.4rem;
+	margin-top: 5px;
+}
+
+input {
+	outline: none;
+}
+
+.box-input {
+	position: relative;
+	padding-top: 0.5em;
+	margin-top: 30px;
+}
+.box-input input {
+	border: none;
+	border-bottom: 1px solid $blue-color;
+	width: 100%;
+	font-size: 1rem;
+	padding: 5px;
+	color: $blue-color;
+}
+$grey: #c7c7c7;
+.box-input label {
+	position: absolute;
+	top: 13px;
+    left: 4px;
+	transition: .5s;
+	pointer-events: none;
+	color: $grey;
+}
+.box-input input:focus ~ label,
+.box-input input:valid ~ label {
+	top: -15px;
+	font-size: 0.8rem;
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+	width: 110%;
+    position: relative;
+    left: -5%;
+}
+
+.button {
+	color: #fff;
+	font-family: 'Ubuntu', 'Gothem Pro', sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	text-transform: uppercase;
+	border-radius: 50px;
+	border: none;
+}
+
+.return-button {
+	color: #1a95b2;
+	font-size: 1.2rem;
+	background-color: rgba(238, 238, 238, 0);
+	padding: 20px 10px;	
+	transition: background-color 0.2s;
+	&:hover {
+		background-color: rgba(238, 238, 238, 1);
+	}
+}
+
+$shadow-width: 6px;
+.confirm-button {
+	font-size: 1.4rem;
+	background-color: #a9da20;
+	box-shadow: 0px 0px 0px $shadow-width rgba(169, 218,  32, 0.5);
+	padding: 20px 60px;	
+
+	&:hover {
+		color: #fbfcf7;
+		background-color: #87ab24;
+		box-shadow: 0px 0px 0px $shadow-width rgba(135, 171,  36, 0.5);
+		transition: all 0.2s ease-out 0s;
+	}
+	&:active {
+		background: linear-gradient(-10deg, #a9da20, #77961f);
+		border: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+
+
+.select-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 0.5em;
+  position: relative;
+}
+
+
+.select-box .options-container {
+	position: absolute;
+	top: 100%;
+	max-height: 0;
+	background-color: #fff;
+	color: #8f8f8f;
+	width: 100%;
+	opacity: 0;
+	overflow: hidden;
+	max-height: 0;
+  	transition: all 0.5s ease;
+
+	border-right: solid 1px $blue-color;
+	border-left: solid 1px $blue-color;
+	border-bottom: solid 1px $blue-color;
+	border-top: none;
+	
+	z-index: 1;
+	order: 1;
+}
+.select-box .options-container.active {
+	max-height: 300px;
+  	opacity: 1;
+}
+
+
+.selected {	
+	border-bottom: 1px solid #0089a9;
+	width: 100%;
+	font-size: 1rem;
+	padding: 5px;
+	color: $grey;
+	order: 0;
+	&:after {
+		content: "\2039";
+	    color: #0089a9;
+	    font-size: 20px;
+	    position: absolute;
+	    transform: rotateZ(-90deg);
+	    right: 19px;
+	    top: 11px;
+	    transition: .5s;
+	}
+}
+
+.selected.active {
+	color: $blue-color;
+}
+
+.selected,
+.select-box label  {
+  cursor: pointer;
+}
+
+.option {
+	padding: 7px 0 7px 10px;
+	&:hover {
+		color: $blue-color;
+	}
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg) rotateZ(-90deg);
+}
+

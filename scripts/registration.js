@@ -1,8 +1,9 @@
-const dropList = function () {
-	const selected = document.querySelector(".selected");
-	const optionsContainer = document.querySelector(".options-container");
+// показывает выпадающий список
+const dropList = function (o) {
+	const selected = o.querySelector(".selected");
+	const optionsContainer = o.querySelector(".options-container");
 
-	const optionsList = document.querySelectorAll(".option");
+	const optionsList = o.querySelectorAll(".option");
 
 	selected.addEventListener("click", () => {
 	  optionsContainer.classList.toggle("active");
@@ -17,4 +18,8 @@ const dropList = function () {
 	});
 };
 
-dropList();
+// для каждого select-box запускаем функцию выпадающего списка
+const selectBoxs = document.querySelectorAll(".select-box");
+selectBoxs.forEach(o => {
+	dropList(o);
+});

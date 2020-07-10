@@ -21,33 +21,81 @@
 			<h2>Регистрация</h2>
 			<h4>участника конференции</h4>
 			<form id="form1">
-				<div class="box-input">
-					<input class="input" type="text" required>
-					<label>Введите E-mail</label>
-				</div>
-				<div class="box-input">
-					<input class="input" type="text" required>
-					<label>Введите E-mail</label>
-				</div>
-				<div class="box-input">
-					<input class="input" type="text" required>
-					<label>Введите E-mail</label>
-				</div>
-				<div class="box-input">
-					<input class="input" type="text" required>
-					<label>Введите E-mail</label>
-				</div>
-				<div class="box-input">
-					<input class="input" type="text" required>
-					<label>Введите E-mail</label>
-				</div>
-				<div class="box-input">
-					<input class="input" type="text" required>
-					<label>Введите E-mail</label>
+				<div class="box-input-wrapper">
+					<div class="box-input">
+						<input class="input" type="text" required>
+						<label>Фамилия</label>
+					</div>
+					<div class="box-input-row">
+						<div class="box-input">
+							<input class="input" type="text" required>
+							<label>Имя</label>
+						</div>
+						<div class="box-input">
+							<input class="input" type="text" required>
+							<label>Отчество</label>
+						</div>
+					</div>
+					<div class="box-input">
+						<input class="input" type="text" required>
+						<label>Номер телефона</label>
+					</div>
+					<div class="box-input">
+						<input class="input" type="text" required>
+						<label>E-mail</label>
+					</div>
+					<div class="box-input">
+						<input class="input" type="text" required>
+						<label>Место работы</label>
+					</div>
+					<div class="box-input">
+						<input class="input" type="text" required>
+						<label>Должность</label>
+					</div>
 				</div>
 
 
 			  <div class="select-box">
+	        <div class="options-container">
+	          <div class="option">
+	            <input
+	              type="radio"
+	              class="radio"
+	              name="category"
+	            />
+	            <label for="">Онлайн-обучение</label>
+	          </div>
+	          <div class="option">
+	            <input
+	              type="radio"
+	              class="radio"
+	              name="category"
+	            />
+	            <label for="">Технологическое предпринимательство</label>
+	          </div>
+	          <div class="option">
+	            <input
+	              type="radio"
+	              class="radio"
+	              name="category"
+	            />
+	            <label for="">Управление проектами на основе данных CDO</label>
+	          </div>
+	          <div class="option">
+	            <input
+	              type="radio"
+	              class="radio"
+	              name="category"
+	            />
+	            <label for="">Управление образовательными процессами на основе данных</label>
+	          </div>
+					</div>
+					<div class="selected">
+	          <p>Интересующие тематики</p>
+	        </div>
+				</div>
+
+				<div class="select-box">
 	        <div class="options-container">
 	          <div class="option">
 	            <input
@@ -86,7 +134,12 @@
 	          <p>Выберите билет</p>
 	        </div>
 				</div>
-
+				
+				<div class="checkbox">
+					<input type="checkbox" id="agreement" name="agreement" value="true">
+					  			<label for="agreement">Я согласен на обработку персональных данных</label>
+				</div>
+				
 				<div class="button-wrapper">
 					<button class="button return-button">
 						Вернуться на главную		

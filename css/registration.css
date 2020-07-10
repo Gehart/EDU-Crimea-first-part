@@ -69,6 +69,12 @@ input {
   top: -15px;
   font-size: 0.8rem; }
 
+.box-input-row {
+  display: flex;
+  justify-content: space-between; }
+  .box-input-row .box-input {
+    width: 47%; }
+
 .button-wrapper {
   display: flex;
   justify-content: space-between;
@@ -129,7 +135,7 @@ input {
   opacity: 0;
   overflow: hidden;
   max-height: 0;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
   border-right: solid 1px #0089a9;
   border-left: solid 1px #0089a9;
   border-bottom: solid 1px #0089a9;
@@ -175,5 +181,37 @@ input {
 
 .select-box .options-container.active + .selected::after {
   transform: rotateX(180deg) rotateZ(-90deg); }
+
+.checkbox {
+  margin-top: 30px;
+  color: #c7c7c7;
+  padding-top: 0.5em; }
+
+input[type=checkbox] + label {
+  cursor: pointer;
+  user-select: none; }
+
+input[type=checkbox] {
+  display: none; }
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 2px solid #0089a9;
+  color: transparent;
+  margin-right: 1rem;
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  vertical-align: bottom;
+  text-align: center;
+  transition: .1s; }
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0); }
+
+input[type=checkbox]:checked + label:before {
+  color: #0089a9; }
 
 /*# sourceMappingURL=registration.css.map */

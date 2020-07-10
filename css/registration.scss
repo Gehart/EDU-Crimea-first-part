@@ -36,7 +36,7 @@ $blue-color:#0089a9;
 
 .reg-content {
 	// flex-basis: 555px;
-	width: 555px;
+	max-width: 555px;
 
 	padding: 0 15px;
 	margin-left: 10%;
@@ -85,7 +85,7 @@ $grey: #c7c7c7;
 	color: $grey;
 }
 .box-input input:focus ~ label,
-.box-input input:valid ~ label {
+.box-input input.is-fill ~ label {
 	top: -15px;
 	font-size: 0.8rem;
 }
@@ -121,7 +121,8 @@ $grey: #c7c7c7;
 	color: #1a95b2;
 	font-size: 1.2rem;
 	background-color: rgba(238, 238, 238, 0);
-	padding: 20px 10px;	
+	padding: 1rem 1rem;	
+	padding: 20px 10px;
 	transition: background-color 0.2s;
 	&:hover {
 		background-color: rgba(238, 238, 238, 1);
@@ -133,8 +134,9 @@ $shadow-width: 6px;
 	font-size: 1.4rem;
 	background-color: #a9da20;
 	box-shadow: 0px 0px 0px $shadow-width rgba(169, 218,  32, 0.5);
-	padding: 20px 60px;	
-
+	padding: 1.5rem 2rem;
+	
+	padding: 20px 60px;
 	&:hover {
 		color: #fbfcf7;
 		background-color: #87ab24;
@@ -267,4 +269,43 @@ input[type=checkbox] + label:active:before {
 
 input[type=checkbox]:checked + label:before {
   color: $blue-color;
+}
+@media (max-width: 1024px) {
+	.button-wrapper {
+	   	width: 100%;
+	    position: relative;
+	    left: 0;
+    }
+}
+@media (max-width: 768px) {
+	.reg-content {
+	     margin-left: 0; 
+	}
+
+	.return-button {
+		font-size: 1rem;
+		padding: 1rem 1.1rem;
+	    padding: 0.6em 1.9em;
+	}
+	.confirm-button {
+		font-size: 1.2rem;
+	    padding: 0.6em 1.9em;
+	}
+}
+@media (max-width: 450px) {
+	.bg {
+		width: 0;
+	}
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h4 {
+		font-size: 1.1rem;
+		margin-bottom: 50px;
+	}
+	.reg-content {
+		max-width: 100%;
+		margin: 0;
+	}
 }

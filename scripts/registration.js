@@ -23,3 +23,19 @@ const selectBoxs = document.querySelectorAll(".select-box");
 selectBoxs.forEach(o => {
 	dropList(o);
 });
+
+
+const inputText = document.querySelectorAll(".box-input input");
+inputText.forEach(e=>{
+	e.addEventListener('blur', checkFill);
+});
+
+
+function checkFill() {
+	if(this.value !='') {
+		this.classList.add('is-fill');
+	}
+	else {
+		this.classList.remove('is-fill');
+	}
+};

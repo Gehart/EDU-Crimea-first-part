@@ -7,7 +7,7 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 	<meta charset="utf-8">
@@ -20,10 +20,11 @@
 		<div class="reg-content">
 			<h2>Регистрация</h2>
 			<h4>участника конференции</h4>
-			<form id="form1">
+			<form id="form1" action="">
 				<div class="box-input-wrapper">
 					<div class="box-input">
-						<input class="input" type="text" required>
+						<!-- autofocus -->
+						<input class="input" type="text"  required>
 						<label>Фамилия</label>
 					</div>
 					<div class="box-input-row">
@@ -37,7 +38,7 @@
 						</div>
 					</div>
 					<div class="box-input">
-						<input class="input" type="text" required>
+						<input class="input" type="text">
 						<label>Номер телефона</label>
 					</div>
 					<div class="box-input">
@@ -45,11 +46,11 @@
 						<label>E-mail</label>
 					</div>
 					<div class="box-input">
-						<input class="input" type="text" required>
+						<input class="input" type="text">
 						<label>Место работы</label>
 					</div>
 					<div class="box-input">
-						<input class="input" type="text" required>
+						<input class="input" type="text">
 						<label>Должность</label>
 					</div>
 				</div>
@@ -91,7 +92,7 @@
 	          </div>
 					</div>
 					<div class="selected">
-	          <p>Интересующие тематики</p>
+	          <p>Интересующая тематика</p>
 	        </div>
 				</div>
 
@@ -141,9 +142,12 @@
 				</div>
 				
 				<div class="button-wrapper">
-					<button class="button return-button">
-						Вернуться на главную		
-					</button>	
+					<a href="#">
+						<button class="button return-button">
+							Вернуться на главную		
+						</button>	
+					</a>
+					
 					<button class="button confirm-button">
 						Оформить	
 					</button>
@@ -151,6 +155,8 @@
 			</form>
 		</div>
 	</div>
+
+	<script src="scripts/jquery-3.5.1.min.js"></script>
 	<script src="scripts/registration.js"></script>
 </body>
 </html>

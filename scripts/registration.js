@@ -24,6 +24,13 @@ selectBoxs.forEach(o => {
 	dropList(o);
 });
 
+window.onload = function () {
+	const inputText = document.querySelectorAll(".box-input input");
+	inputText.forEach(e=>{
+		checkFillForInput(e);
+	});
+};
+
 // проверка и очистка сообщений об ошибках в полях ввода
 const inputText = document.querySelectorAll(".box-input input");
 inputText.forEach(e=>{
@@ -41,7 +48,14 @@ checkboxs.forEach(o => {
 	o.addEventListener('click', removeErrorMessage);
 });
 
-
+function checkFillForInput(inputBox) {
+	if(inputBox.value !='') {
+		inputBox.classList.add('is-fill');
+	}
+	else {
+		inputBox.classList.remove('is-fill');
+	}
+};
 function checkFill() {
 	if(this.value !='') {
 		this.classList.add('is-fill');

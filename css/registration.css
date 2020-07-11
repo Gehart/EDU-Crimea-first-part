@@ -20,12 +20,16 @@ body {
   background-image: url("../img/registration-bg.png");
   background-size: cover;
   background-position: right center;
-  width: 40%; }
+  max-width: 50%;
+  width: 100%; }
+
+.registration {
+  padding: 0 0.5%; }
 
 .reg-content {
   max-width: 555px;
-  padding: 0 15px;
-  margin-left: 10%; }
+  width: 100%;
+  padding: 0 15px; }
 
 h2, h4 {
   color: #0089a9;
@@ -60,7 +64,7 @@ input {
   position: absolute;
   top: 13px;
   left: 4px;
-  transition: .5s;
+  transition: .3s ease-out;
   pointer-events: none;
   color: #c7c7c7; }
 
@@ -77,11 +81,11 @@ input {
 
 .button-wrapper {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   margin-top: 50px;
-  width: 110%;
-  position: relative;
-  left: -5%; }
+  margin-bottom: 15px; }
+  .button-wrapper a {
+    width: 50%; }
 
 .button {
   color: #fff;
@@ -90,16 +94,16 @@ input {
   font-style: normal;
   text-transform: uppercase;
   border-radius: 50px;
-  border: none; }
+  border: none;
+  width: 50%; }
   .button:focus {
     outline: none; }
 
 .return-button {
   color: #1a95b2;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   background-color: rgba(238, 238, 238, 0);
-  padding: 1rem 1rem;
-  padding: 20px 10px;
+  width: 100%;
   transition: background-color 0.2s; }
   .return-button:hover {
     background-color: #eeeeee; }
@@ -108,8 +112,7 @@ input {
   font-size: 1.4rem;
   background-color: #a9da20;
   box-shadow: 0px 0px 0px 6px rgba(169, 218, 32, 0.5);
-  padding: 1.5rem 2rem;
-  padding: 20px 60px; }
+  padding: 10px; }
   .confirm-button:hover {
     color: #fbfcf7;
     background-color: #87ab24;
@@ -188,6 +191,8 @@ input {
   margin-top: 30px;
   color: #c7c7c7;
   padding-top: 0.5em; }
+  .checkbox label a {
+    color: #0089a9; }
 
 input[type=checkbox] + label {
   cursor: pointer;
@@ -226,8 +231,10 @@ input ~ p.error-message-empty {
   font-size: 0.85rem;
   pointer-events: none;
   position: absolute;
+  background-color: #fff;
   right: 0.5rem;
-  top: 15px;
+  padding: 0 3px;
+  top: 29px;
   transition: opacity .5s; }
 
 input.empty ~ p.error-message-empty {
@@ -242,8 +249,9 @@ input.novalid ~ p.error-message-novalid {
   font-size: 0.85rem;
   pointer-events: none;
   position: absolute;
-  right: 30px;
-  top: 15px;
+  right: 0.5rem;
+  top: 28px;
+  background-color: #fff;
   transition: opacity .5s; }
 
 .selected.empty .error-message {
@@ -264,17 +272,23 @@ input[type=checkbox].empty ~ p.error-message {
     position: relative;
     left: 0; } }
 @media (max-width: 768px) {
+  .bg {
+    max-width: 30%; }
+
   .reg-content {
     margin-left: 0; }
 
+  h2 {
+    font-size: 2.5rem; }
+
+  h4 {
+    font-size: 1.1rem; }
+
   .return-button {
-    font-size: 1rem;
-    padding: 1rem 1.1rem;
-    padding: 0.6em 1.9em; }
+    font-size: 1rem; }
 
   .confirm-button {
-    font-size: 1.2rem;
-    padding: 0.6em 1.9em; } }
+    font-size: 1.2rem; } }
 @media (max-width: 450px) {
   .bg {
     width: 0; }

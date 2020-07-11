@@ -115,6 +115,9 @@ $grey: #c7c7c7;
 	text-transform: uppercase;
 	border-radius: 50px;
 	border: none;
+	&:focus {
+		outline: none;
+	}
 }
 
 .return-button {
@@ -146,9 +149,6 @@ $shadow-width: 6px;
 	&:active {
 		background: linear-gradient(-10deg, #a9da20, #77961f);
 		border: none;
-	}
-	&:focus {
-		outline: none;
 	}
 }
 
@@ -197,6 +197,7 @@ $shadow-width: 6px;
 	padding: 5px;
 	color: $grey;
 	order: 0;
+    padding-right: 25px;
 	&:after {
 		content: "\2039";
 	    color: #0089a9;
@@ -218,15 +219,15 @@ $shadow-width: 6px;
   cursor: pointer;
 }
 
+.option label {
+    padding: 7px 0 7px 10px;
+    display: block;
+}
+
 .option {
-	padding: 7px 0 7px 10px;
 	&:hover {
 		color: $blue-color;
 	}
-}
-
-.select-box .option .radio {
-  display: none;
 }
 
 .select-box .options-container.active + .selected::after {
@@ -245,6 +246,9 @@ input[type=checkbox] + label {
 }
 
 input[type=checkbox] {
+  display: none;
+}
+input[type=radio] {
   display: none;
 }
 
@@ -270,6 +274,53 @@ input[type=checkbox] + label:active:before {
 input[type=checkbox]:checked + label:before {
   color: $blue-color;
 }
+
+input ~ p.error-message,
+input ~ p.error-message-empty {
+	opacity: 0; 
+	color: #e44343;
+	font-size: 0.85rem;
+	pointer-events: none;
+	position: absolute;
+    right: 0.5rem;
+    top: 15px;
+    transition: opacity .5s;
+}
+
+input.empty ~ p.error-message-empty {
+    opacity: 1;	
+}
+
+input.novalid ~ p.error-message-novalid {
+    opacity: 1;	
+}
+
+.selected .error-message {
+	opacity: 0; 
+	color: #e44343;
+	font-size: 0.85rem;
+	pointer-events: none;
+	position: absolute;
+    right: 30px;
+    top: 15px;
+    transition: opacity .5s;
+}
+
+.selected.empty .error-message{
+	opacity: 1;
+}
+
+.checkbox .error-message {
+	opacity: 0;
+    padding-top: 10px;
+    position: initial;
+    transition: opacity .5s;
+}
+
+input[type=checkbox].empty ~ p.error-message{
+	opacity: 1;
+}
+
 @media (max-width: 1024px) {
 	.button-wrapper {
 	   	width: 100%;

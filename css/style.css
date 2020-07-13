@@ -199,7 +199,8 @@ a {
     font-size: 18px;
     width: 60%; }
 
-.reg-button {
+.reg-button,
+.btn {
   color: #fff;
   font-family: 'Ubuntu', 'Gothem Pro', sans-serif;
   font-size: 24px;
@@ -212,15 +213,18 @@ a {
   border-radius: 50px;
   border: none;
   box-shadow: 0px 0px 0px 6px rgba(169, 218, 32, 0.5); }
-  .reg-button:hover {
+  .reg-button:hover,
+  .btn:hover {
     color: #fbfcf7;
     background-color: #87ab24;
     box-shadow: 0px 0px 0px 6px rgba(135, 171, 36, 0.5);
     transition: all 0.2s ease-out 0s; }
-  .reg-button:active {
+  .reg-button:active,
+  .btn:active {
     background: linear-gradient(-10deg, #a9da20, #77961f);
     border: none; }
-  .reg-button:focus {
+  .reg-button:focus,
+  .btn:focus {
     outline: none; }
 
 .inkblot-column {
@@ -526,7 +530,7 @@ a {
   font-family: 'Gotham Pro';
   font-weight: 900;
   font-style: normal;
-  font-size: 60px;
+  font-size: 50px;
   color: #0089a9;
   text-align: center; }
 
@@ -638,14 +642,16 @@ a {
 .speakers .container {
   padding: 0 15px;
   position: relative; }
-  .speakers .container h3 {
-    font-family: 'Gotham Pro', sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 60px;
-    color: #0089a9;
-    text-align: center;
-    padding-bottom: 40px; }
+
+.speakers .container h3,
+.section-title {
+  font-family: 'Gotham Pro', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 50px;
+  color: #0089a9;
+  text-align: center;
+  padding-bottom: 40px; }
 
 .item {
   position: relative;
@@ -745,5 +751,65 @@ a {
   .item-img {
     height: 450px;
     margin: 0 auto; } }
+.at-conference {
+  background-image: url("../img/part2/bg-at-the-conference.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 170vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: -70px;
+  margin-bottom: -70px;
+  padding-top: 70px;
+  color: #fff; }
+  .at-conference .section-title {
+    color: #fff; }
+  .at-conference .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+.at-conference-item-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+.at-conference-item {
+  width: 30%;
+  min-width: 330px;
+  padding: 20px;
+  margin: 15px;
+  background: linear-gradient(0deg, #00bfbf, #008ba9);
+  border: 7px solid #fff;
+  border-radius: 5px;
+  text-align: center; }
+  .at-conference-item h4 {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 30px 0; }
+  .at-conference-item p.italic {
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 900;
+    min-height: 3.5rem; }
+  .at-conference-item hr {
+    border: none;
+    background-color: #a9da20;
+    width: calc((100% + 40px)*0.7);
+    height: 1px; }
+  .at-conference-item p:last-child {
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 500;
+    width: calc((100% + 40px)*0.7);
+    min-height: 8rem;
+    margin: 0 auto;
+    padding-top: 15px; }
+
+.at-conference .btn {
+  font-size: 1.3rem;
+  padding: 15px 50px; }
 
 /*# sourceMappingURL=style.css.map */

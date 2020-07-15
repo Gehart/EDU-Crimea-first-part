@@ -17,7 +17,6 @@
 
 .parner-logo {
 	height: 150px;
-	// min-width: calc(20% + 30px);
 	margin: 30px 25px 0 25px;
 	display: flex;
 	justify-content: center;
@@ -51,8 +50,6 @@
 
 @media (max-width: 370px) {
 	.parner-logo{
-		height: 80px; 	
-		// margin-right: 15px;
-		// margin-left: 15px;
+		height: 80px;
 	}
 }

@@ -18,21 +18,17 @@ $footer-height: 225px;
 $width-div: 30%;
 
 .footer .container > div {
-	// width: $width-div;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    // min-width: 300px;
     flex-wrap: wrap;
 	
 	height: $footer-height * 0.6;
-	// outline: 1px solid orange;
 }
 
 .sevsu-logo {
 	img {
 		width: 200px;
-	    // width: inherit;
 	    height: inherit;
 	    object-fit: contain;
 	}
@@ -93,29 +89,20 @@ $width-div: 30%;
 
 @media (max-width: 895px) {
 	.center-of-footer {
-
-	    // height: 100px !important;
 		order: 2;
 	}
 
 	.center-of-footer {
-		// text-align: center;
-		// flex-basis: 312px;
-		// flex-shrink: 0;
 		h2 {
 			font-size: 2rem;
 		}
 		.social-media {
-			// display: flex;
-			// width: 35%;
-			// justify-content: space-around;
 			img {
 				height: 20px;
 				width:  20px;
 			}
 		}
 	}
-
 }
 
 @media (max-width: 450px) {

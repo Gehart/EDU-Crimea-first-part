@@ -10,13 +10,13 @@
 
 	margin-top: -70px;
 	margin-bottom: -70px;
-	padding-top: 70px;
-	padding-bottom: 70px;
+	padding-top: 140px;
+	padding-bottom: 140px;
 	
 	color: #fff;
 
 	.section-title {
-		color: #fff;
+		// color: #fff;
 	}
 	
 	.container {
@@ -86,12 +86,17 @@ $item-padding: 20px;
 	font-size: 1.3rem;
 	padding: 15px 50px;
 }
-
+@media (max-width: 1024px) {
+	.at-conference {
+		background-size: auto 100%;
+		background-position: center center;
+	}
+}
 @media (max-width: 756px) {
 	.at-conference {
 		margin-top: 0;
 		margin-bottom: 0;
-		// padding-top: 70px;
-		// padding-bottom: 70px;
+		padding-top: 70px;
+		padding-bottom: 70px;
 	}
 }

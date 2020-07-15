@@ -228,6 +228,9 @@ a {
   .btn:focus {
     outline: none; }
 
+.btn {
+  margin: 45px 0 0 0px; }
+
 .inkblot-column {
   display: flex;
   flex-direction: column;
@@ -754,7 +757,10 @@ a {
 @media (max-width: 450px) {
   .item-img {
     height: 450px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .section-title {
+    font-size: 35px; } }
 .at-conference {
   background-image: url("../img/part2/bg-at-the-conference.png");
   background-size: 100% 100%;
@@ -830,9 +836,21 @@ a {
     margin-bottom: 0;
     padding-top: 70px;
     padding-bottom: 70px; } }
+@media (max-width: 450px) {
+  .at-conference-item {
+    padding: 20px 0;
+    margin: 0;
+    margin-top: 15px; } }
+@media (max-width: 370px) {
+  .at-conference-item {
+    min-width: 100%; }
+    .at-conference-item h4 {
+      font-size: 1.8em; } }
 .buy-tickets {
   color: #fff;
   padding-top: 50px; }
+  .buy-tickets .container {
+    overflow-x: hidden; }
 
 .buy-tickets-item-wrapper {
   display: flex;
@@ -877,11 +895,11 @@ a {
 
 .best-advertisment {
   position: absolute;
-  transform: translate(35%, -50%);
+  transform: translate(18%, -30%);
   top: 0;
   right: 0;
-  width: 145px;
-  height: 145px; }
+  width: 130px;
+  height: 130px; }
   .best-advertisment img {
     width: inherit;
     height: inherit;
@@ -894,6 +912,14 @@ a {
     font-size: 1.3rem;
     font-weight: bold; }
 
+@media (max-width: 450px) {
+  .buy-tickets-item {
+    padding: 20px 0;
+    margin: 0;
+    margin-top: 15px; } }
+@media (max-width: 370px) {
+  .buy-tickets-item {
+    min-width: 100%; } }
 .partners {
   margin-top: 50px;
   padding-top: 40px;
@@ -974,6 +1000,7 @@ a {
   .center-of-footer .social-media {
     display: flex;
     width: 35%;
+    min-width: 100px;
     justify-content: space-around;
     margin: 0 auto; }
     .center-of-footer .social-media img {
@@ -1011,13 +1038,6 @@ a {
     width: 20px; } }
 @media (max-width: 450px) {
   .contacts {
-    flex-basis: 50%;
-    max-width: 50%;
-    order: 1;
-    align-content: center; }
-
-  .center-of-footer {
-    flex-basis: 50%;
-    max-width: 50%; } }
+    align-content: center; } }
 
 /*# sourceMappingURL=style.css.map */

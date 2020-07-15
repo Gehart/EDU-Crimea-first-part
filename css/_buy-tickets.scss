@@ -1,6 +1,9 @@
 .buy-tickets {
 	color: #fff;	
     padding-top: 50px;
+    .container{
+    	overflow-x: hidden;
+    }
 }
 
 .buy-tickets-item-wrapper {
@@ -57,12 +60,13 @@
 }
 
 .best-advertisment {
-	position: absolute;	
-    transform: translate(35%, -50%);
-	top: 0;
-	right: 0;
-	width: 145px;
-    height: 145px;
+ 	position: absolute;
+ 	transform: translate(18%, -30%);
+    top: 0;
+    right: 0;
+    width: 130px;
+    height: 130px;
+
     
 	img  {
 	    width: inherit;
@@ -77,5 +81,20 @@
 	    transform: translateY(-50%);
 	    font-size: 1.3rem;
 	    font-weight: bold;
+	}
+}
+
+
+@media (max-width: 450px) {
+	.buy-tickets-item {
+		// min-width: 100%;
+		padding: $item-padding 0;
+		margin: 0;
+		margin-top: 15px;
+	}
+}
+@media (max-width: 370px) {
+	.buy-tickets-item {
+		min-width: 100%;
 	}
 }

@@ -51,6 +51,7 @@ $width-div: 30%;
 	.social-media {
 		display: flex;
 		width: 35%;
+		min-width: 100px;
 		justify-content: space-around;
 		margin: 0 auto;
 		img {
@@ -107,13 +108,6 @@ $width-div: 30%;
 
 @media (max-width: 450px) {
 	.contacts {
-		flex-basis: 50%;
-		max-width: 50%;
-		order: 1;
 		align-content: center;
-	}
-	.center-of-footer {
-		flex-basis: 50%;
-		max-width: 50%;
 	}
 }

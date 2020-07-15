@@ -3,7 +3,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
-	min-height: 170vh;
+	min-height: 1100px;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -16,7 +16,7 @@
 	color: #fff;
 
 	.section-title {
-		// color: #fff;
+		color: #fff;
 	}
 	
 	.container {
@@ -86,10 +86,13 @@ $item-padding: 20px;
 	font-size: 1.3rem;
 	padding: 15px 50px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
 	.at-conference {
 		background-size: auto 100%;
 		background-position: center center;
+	}
+	.at-conference .section-title {
+		color: #0089a9;
 	}
 }
 @media (max-width: 756px) {

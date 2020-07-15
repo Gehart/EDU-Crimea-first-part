@@ -759,7 +759,7 @@ a {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 170vh;
+  min-height: 1100px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -768,6 +768,8 @@ a {
   padding-top: 140px;
   padding-bottom: 140px;
   color: #fff; }
+  .at-conference .section-title {
+    color: #fff; }
   .at-conference .container {
     display: flex;
     flex-direction: column;
@@ -814,10 +816,13 @@ a {
   font-size: 1.3rem;
   padding: 15px 50px; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
   .at-conference {
     background-size: auto 100%;
-    background-position: center center; } }
+    background-position: center center; }
+
+  .at-conference .section-title {
+    color: #0089a9; } }
 @media (max-width: 756px) {
   .at-conference {
     margin-top: 0;

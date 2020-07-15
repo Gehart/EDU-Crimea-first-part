@@ -212,7 +212,8 @@ a {
   background-color: #a9da20;
   border-radius: 50px;
   border: none;
-  box-shadow: 0px 0px 0px 6px rgba(169, 218, 32, 0.5); }
+  box-shadow: 0px 0px 0px 6px rgba(169, 218, 32, 0.5);
+  cursor: pointer; }
   .reg-button:hover,
   .btn:hover {
     color: #fbfcf7;

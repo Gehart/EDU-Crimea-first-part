@@ -89,6 +89,7 @@ $shadow-width: 6px;
 	border: none;
 	box-shadow: 0px 0px 0px $shadow-width rgba(169, 218,  32, 0.5);
 	
+	cursor: pointer;
 	&:hover {
 		color: #fbfcf7;
 		background-color: #87ab24;

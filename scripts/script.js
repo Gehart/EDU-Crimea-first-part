@@ -78,7 +78,7 @@ let sections = document.querySelectorAll('section');
 // отступ до центра экрана
 let offsetToCenter = document.documentElement.clientHeight / 2;
 // последняя добавленная точка
-let lastIndex;
+let lastIndex = 0;
 
 changeDotPosition();
 window.addEventListener("scroll", changeDotPosition);

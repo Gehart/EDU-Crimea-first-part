@@ -1,0 +1,113 @@
+$footer-height: 225px;
+.footer {
+	background: linear-gradient(180deg, #00bec0, #008aa9);
+	min-height: $footer-height;
+    display: flex;
+    align-items: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+	flex-wrap: wrap;
+	color: #fff;
+	width: 100%;
+}
+
+$width-div: 30%;
+
+.footer .container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+	
+	height: $footer-height * 0.6;
+}
+
+.sevsu-logo {
+	img {
+		width: 200px;
+	    height: inherit;
+	    object-fit: contain;
+	}
+	flex-shrink: 2;
+	flex-basis: 30%;
+	max-width: 30%;
+	min-width: 215px;
+
+
+}
+
+.center-of-footer {
+	text-align: center;
+	flex-basis: 312px;
+	flex-shrink: 0;
+	h2 {
+		font-size: 3.1rem;
+		font-weight: bold;
+	}
+	.social-media {
+		display: flex;
+		width: 35%;
+		min-width: 100px;
+		justify-content: space-around;
+		margin: 0 auto;
+		img {
+			height: 30px;
+			width:  30px;
+			}
+	}
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	align-content: flex-end;
+
+	flex-shrink: 2;
+	flex-basis: 30%;
+	max-width: 30%;
+	min-width: 215px;
+	h5 {
+		font-size: 1.1rem;
+		font-weight: bold;
+	}
+	p {
+		font-size: 1rem;
+	}
+}
+
+
+.contacts-text {
+	display: flex;
+	flex-direction: column;
+
+    height: inherit;
+    justify-content: space-around;
+}
+
+@media (max-width: 895px) {
+	.center-of-footer {
+		order: 2;
+	}
+
+	.center-of-footer {
+		h2 {
+			font-size: 2rem;
+		}
+		.social-media {
+			img {
+				height: 20px;
+				width:  20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.contacts {
+		align-content: center;
+	}
+}

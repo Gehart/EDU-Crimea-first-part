@@ -1,0 +1,100 @@
+.buy-tickets {
+	color: #fff;	
+    padding-top: 50px;
+    .container{
+    	overflow-x: hidden;
+    }
+}
+
+.buy-tickets-item-wrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.buy-tickets-item {
+	width: 30%;
+    min-width: 330px;
+    margin: 30px 10px 0px 10px;
+	padding: $item-padding;
+
+
+	background: linear-gradient(0deg, #00c0c0, #0099b0);
+	border: 6px solid #7fd4db;
+	border-radius: 10px;
+
+	text-align: center;
+	
+	position: relative;
+	h4 {
+		font-size: 2em;
+		font-weight: 500;
+		letter-spacing: .15rem;
+		padding-top: 10px;
+	}
+
+	h5 {
+	    font-size: 2em;
+	    line-height: 0.5;
+	    padding: 30px 0 40px 0;
+		span {
+			font-size: 0.9rem;
+			font-weight: 500;
+		}
+	}
+	p {
+		font-style: normal;
+		font-size: 1rem;
+		font-weight: normal;
+		padding-bottom: 25px;
+	}
+}
+
+.buy-tickets-item .btn {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 13px 74px;
+    display: inline-block;
+}
+
+.best-advertisment {
+ 	position: absolute;
+ 	transform: translate(18%, -30%);
+    top: 0;
+    right: 0;
+    width: 130px;
+    height: 130px;
+
+    
+	img  {
+	    width: inherit;
+	    height: inherit;
+	    object-fit: contain;
+	}
+	
+	p {
+		position: absolute;
+	    top: 50%;
+	    padding: 0;
+	    transform: translateY(-50%);
+	    font-size: 1.3rem;
+	    font-weight: bold;
+	}
+}
+
+
+@media (max-width: 450px) {
+	.buy-tickets-item {
+		// min-width: 100%;
+		padding: $item-padding 0;
+		margin: 0;
+		margin-top: 15px;
+	}
+}
+@media (max-width: 370px) {
+	.buy-tickets-item {
+		min-width: 100%;
+	}
+}
